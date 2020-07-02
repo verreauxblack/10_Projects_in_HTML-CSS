@@ -1,0 +1,130 @@
+html{
+    height: 100vh;
+}
+
+.header{
+    text-decoration: underline;
+    text-align: center;
+}
+
+body{
+    padding: 10px;
+    border-right: 10px;
+}
+
+.first_img{
+    max-width: 100%;
+    background-size: cover;
+    margin: auto;
+    border: 10px 100px;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#quote{
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 22vw;
+    padding:0px 19.5px;
+    width: max-content;
+    box-shadow: 20px;
+    background-color: #A9C0E2;
+    font-family: 'kavivanar Regular';
+    font-size: 30px;
+}
+
+#timeline-head{
+    width: 1100px;
+    text-align: center;
+    font-size: 28px;
+    margin: none;
+    margin-top: 0px;
+    padding-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#main-content{
+    /*height: auto;*/
+    width: 1050px;
+    background-color: #D2BBA2;
+    display: flex;
+    flex-flow: row wrap;
+    top: 20px;
+    left: 25px;
+    float: left;
+    padding-right: 0px;
+    border: 1px solid #2B486A;
+
+}
+
+.date{
+    width: 100px;
+    text-align: center;
+    color: #292C6A;
+    font-weight: bold;
+    float: left;
+    border: 5px 0 0 0;
+    padding: 10px 0px 10px 10px;
+    padding-right: 5px;
+}
+
+.desc{
+    width: 870px;
+    padding: 10px 0px 10px 10px;
+    border-bottom: 3px double #FFFFFF;
+    float: left;
+    color: #3D4F5B;
+}
+#bio-content{
+    box-sizing: border-box;
+    clear: both;
+    display: flex;
+    flex-flow: row wrap;
+    width: max-content;
+    margin-left: 80px;
+    float: right;
+    position: relative;
+}
+
+th{
+    text-align: center;
+    padding-right: 10px;
+    color: #02334A;
+}
+
+td{
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+tr{
+    padding: 10px 0px;
+}
+
+#info{
+    text-align: center;
+    display: table;
+    margin-bottom: 2em;
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+}
+
+#second-image {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    position: relative;
+    top: 7px;
+    float: right;
+    right: 18px;
+}
+
+footer{
+    text-align: center;
+    position: sticky;
+}
