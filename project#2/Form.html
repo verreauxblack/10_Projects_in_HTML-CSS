@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Sample Form By RAJ
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css">
+        <style>
+            .column{
+                margin: 8px 32px;
+                display: grid;
+                grid-template-columns: 2fr 0.5fr 2fr;
+                grid-template-rows: auto;
+            }
+            .details{
+                grid-column: 1 / 2;
+            }
+            .colon{
+                grid-column: 2 / 3;
+            }
+            .response{
+                grid-column: 3 / -1;
+            }
+            #mybutton {
+                position: fixed;
+                bottom: -4px;
+                right: 10px;
+            }
+                
+           
+        </style>
+    </head>
+    <body id="body" class="bg-indigo-400 shadow-lg">
+        <div class="bg-gray-600 rounded-lg border-2 border-gray-200 m-16 overflow-hidden"><!--main form div-->
+            <div class="m-4"><!--main div 2-->
+                <form action="#"  method="POST" id="form1">
+
+                    <div class=" text-center -mx-4 p-4 text-4xl text-2xl font-serif font-extrabold text-gray-300 border-b-2">
+                        F . O . R . M
+                    </div>
+
+                    
+                        <div class=""> <!--Form body Div-->
+
+                            <div class="border-b-2 -m-4"> <!--Personal body div-->
+
+                                <div class="font-bold text-xl text-center m-8 underline">
+                                    Personal Details
+                                </div>
+
+                                <div class="px-2 font-semibold"> <!--personal column div-->
+
+                                    <div class=" column">
+                                        <p class=" details"><label for="fname" class=" ">First Name <span class="text-red-800 font-bold text-lg">*</span> </label></p>
+                                        <div class="colon ">:</div>
+                                        <p class=" response"><input type="text" name="fname" class=" rounded-md" placeholder="First Name" required></p>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=" "><label for="lname" class="">Last Name</label></p>
+                                        <div class="colon ">:</div>
+                                        <p class=""><input type="text" name="lname" class=" rounded-md" placeholder="Last Name"></p>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="Father-name" class="">Father/Gaurdian Name<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <p class=""><input type="text" name="Father-name" class=" rounded-md" placeholder="Father/Gaurdian Name" required></p>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="DOB" class="">Date of Birth<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <p class=""><input type=" date" name="DOB" class=" rounded-md" placeholder="DOB" required></p>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="gender" class="">Gender<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <span class=" md:flex">
+                                            <div>
+                                                <input type="radio" id="male" name="gender" class="" required>
+                                                <label for="male" class="mr-2">Male</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="female" name="gender" class="">
+                                                <label for="female" class="mr-2">Female</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="others" name="gender" class="">
+                                                <label for="others" class="mr-2">Others</label>
+                                            </div>
+                                        </span>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="nationality" class="">Nationality<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <span class=" md:flex">
+                                            <div>   
+                                                <input type="radio" id="indian" name="nationality" class="" required>
+                                                <label for="indian" class="mr-2">Indian</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="foreign" name="nationality" class="">
+                                                <label for="foreign" class="mr-2">Foreign</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="Others" name="nationality" class="">
+                                                <label for="Others" class="mr-2">Others</label>
+                                            </div>
+                                        </span>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="religion" class="">Religion<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <span class="radio lg:flex ">
+                                            <p>
+                                                <input type="radio" id="hindu" name="religion" class="" required>
+                                                <label for="hindu" class="mr-2">Hindu</label>
+                                            </p>
+                                            <span class="">
+                                                <input type="radio" id="muslim" name="religion" class="">
+                                                <label for="muslim" class="mr-2">Muslim</label>
+                                            </span>
+                                            <div class="">
+                                                <input type="radio" id="christian" name="religion" class="">
+                                                <label for="christian" class="mr-2">Christian</label>
+                                            </div>
+                                            <div class="sm:flex-row">
+                                                <input type="radio" id="others" name="religion" class="">
+                                                <label for="others" class="mr-2">Others</label>
+                                            </div>
+                                        </span>
+                                    </div>
+
+                                    <div class=" column">
+                                        <p class=""><label for="caste" >Caste<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <div class="colon ">:</div>
+                                        <p class=""><input type="text" name="caste" class=" rounded-md" placeholder="Caste" required></p>
+                                    </div>
+
+                                </div>  <!--personal column div-->
+
+                            </div> <!--Personal body div-->
+
+
+                            <div class="border-b-2 -m-4"> <!--Contact body Div-->
+
+                                <div class="font-bold text-xl text-center m-8 underline">
+                                    Contact Details
+                                </div>
+        
+                                <div class="p-2 font-semibold"> <!--Contact column Div-->
+                                    <div class="column">
+                                        <p class=""><label for="moblie" class="">Moblie-No<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <p>:</p>
+                                        <p class=""><input type="tel" name="moblie" class=" rounded-md placeholder" placeholder="Moblie-No" required></p>
+                                    </div>
+                                    <div class="column">
+                                        <p class=""><label for="laneline" class="">Laneline</label></p>
+                                        <p>:</p>
+                                        <p class=""><input type="tel" name="laneline" class=" rounded-md" placeholder="Laneline"></p>
+                                    </div>
+                                    <div class="column">
+                                        <p class=""><label for="email" class="">E-mail Id<span class="text-red-800 font-bold text-lg">*</span></label></p>
+                                        <p>:</p>
+                                        <p class=""><input type="email" name="email" class=" rounded-md" placeholder="verreaux@example.com" required></p>
+                                    </div>
+                                    <div class="column">
+                                        <p class=""><label for="Bgroup" class="">Blood Group<span class="text-red-800 font-bold text-lg">*</span></label></p> 
+                                        <p>:</p>
+                                        <p class=""><input type="text" name="Bgroup" class=" rounded-md" placeholder="Blood Group" required></p> 
+                                    </div>
+
+
+                                </div> <!--Contact body Div-->
+
+                            </div> <!--Contact body Div-->
+
+
+                            <div class=""> <!--Qualification Div-->
+                                <div class="font-bold text-xl text-center m-8 underline">
+                                    Qualifications 
+                                </div>
+                            <!--<div class="m-4 qualification text-center flex justify-between"><--Qualification Label Div->
+                                    <p class="bg-blue-600"><label for="sno" class="bg-blue-800">SNo</label></p>
+                                    <p class="bg-blue-600"><label for="qualifications" class="bg-blue-800">Qualifications</label></p>
+                                    <p class="bg-blue-600"><label for="year" class="bg-blue-800">Year</label></p>
+                                    <p class="bg-blue-600"><label for="institute" class="bg-blue-800">Institute Name</label></p>
+                                    <p class="bg-blue-600"><label for="place" class="bg-blue-800">Place</label></p>
+                                    <p class="bg-blue-600"><label for="percent" class="bg-blue-800">percentage</label></p>
+                                    <p class="bg-blue-600"><label for="remark" class="bg-blue-800">Remark</label></p>
+                                </div><--Qualification Label Div->-->
+
+                                <!--<div class="qualification2">
+                                    <div class=" qualification flex lg:flex-row flex-col justify-between">
+                                        <p><input type="fixed" name="sno" class="" size="2" value="1"></p>
+                                        <p class=""><input type="text" name="qualifications" class=""size="2"></p>
+                                        <p><input type="year" name="year" class=""size="2"></p>
+                                        <p><input type="text" name="institute" class="" size="2"></p>
+                                        <p><input type="text" name="place" class="" size="2"></p>
+                                        <p><input type="text" name="percent" class="" size="2"></p>
+                                        <p><input type="text" name="remark" class="" size="2"></p>
+                                    </div>
+                                    <div class="flex qualification">
+                                        <p><input type="fixed" name="sno" class="" size="2" value="2"></p>
+                                        <p><input type="text" name="qualifications" size="2" class=""></p>
+                                        <p><input type="year" name="year" class="" size="2"></p>
+                                        <p><input type="text" name="institute" class="" size="2"></p>
+                                        <p><input type="text" name="place" class="" size="2"></p>
+                                        <p><input type="text" name="percent" class="" size="2"></p>
+                                        <p><input type="text" name="remark" class="" size="2"></p>
+                                    </div>
+                                    <div class="qualification">
+                                        <p><input type="fixed" name="sno" class="" size="2" value="3"></p>
+                                        <p><input type="text" name="qualifications" class=""></p>
+                                        <p><input type="year" name="year" class=""></p>
+                                        <p><input type="text" name="institute" class=""></p>
+                                        <p><input type="text" name="place" class=""></p>
+                                        <p><input type="text" name="percent" class=""></p>
+                                        <p><input type="text" name="remark" class=""></p>
+                                    </div>
+                                    <div class="qualification">
+                                        <p><input type="fixed" name="sno" class="" size="2" value="4"></p>
+                                        <p><input type="text" name="qualifications" class=""></p>
+                                        <p><input type="year" name="year" class=""></p>
+                                        <p><input type="text" name="institute" class=""></p>
+                                        <p><input type="text" name="place" class=""></p>
+                                        <p><input type="text" name="percent" class=""></p>
+                                        <p><input type="text" name="remark" class=""></p>
+                                    </div>
+                                </div>-->
+
+
+                                <div class="border-b-2 -mx-4"><!--Qualification table format div-->
+                                    
+                                    <table class="mx-6 mb-8 overflow-x-scroll flex lg:justify-center">
+                                        <tbody>
+                                            <tr>
+                                                <th class=" font-semibold">SNo</th>
+                                                <th class=" font-semibold">Qualifications</th>
+                                                <th class=" font-semibold">Year</th>
+                                                <th class=" font-semibold">Institute Name</th>
+                                                <th class=" font-semibold">Place</th>
+                                                <th class=" font-semibold">Percent</th>
+                                                <th class=" font-semibold">Remark</th>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="reset" name="sno" size="4" class="w-8" value="1"></td>
+                                                <td><input type="text" name="qualifications" class=""></td>
+                                                <td><input type="year" name="year" class="w-20"></td>
+                                                <td><input type="text" name="institute" class=""></td>
+                                                <td><input type="text" name="place" class=""></td>
+                                                <td><input type="text" name="percent" class="w-16"></td>
+                                                <td><input type="text" name="remark" class=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="reset" name="sno" size="4" class="w-8" value="2"></td>
+                                                <td><input type="text" name="qualifications" class=""></td>
+                                                <td><input type="year" name="year" class="w-20"></td>
+                                                <td><input type="text" name="institute" class=""></td>
+                                                <td><input type="text" name="place" class=""></td>
+                                                <td><input type="text" name="percent" class="w-16"></td>
+                                                <td><input type="text" name="remark" class=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="reset" name="sno" size="4" class="w-8" value="3"></td>
+                                                <td><input type="text" name="qualifications" class=""></td>
+                                                <td><input type="year" name="year" class="w-20"></td>
+                                                <td><input type="text" name="institute" class=""></td>
+                                                <td><input type="text" name="place" class=""></td>
+                                                <td><input type="text" name="percent" class="w-16"></td>
+                                                <td><input type="text" name="remark" class=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="reset" name="sno" size="4" class="w-8" value="4"></td>
+                                                <td><input type="text" name="qualifications" class=""></td>
+                                                <td><input type="year" name="year" class="w-20"></td>
+                                                <td><input type="text" name="institute" class=""></td>
+                                                <td><input type="text" name="place" class=""></td>
+                                                <td><input type="text" name="percent" class="w-16"></td>
+                                                <td><input type="text" name="remark" class=""></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div><!--Qualification table format div-->
+
+                            </div> <!--Qualification Div-->
+
+
+                            <div class="font-semibold border-b-2 -mx-4"><!--Footer of form-->
+                                <div class="font-bold text-xl text-center m-6 underline">
+                                    Other Details
+                                </div>
+                                <div class="column">
+                                    <label for="driving" class="">Do You Have Driving License<span class="text-red-800 font-bold text-lg">*</span></label>
+                                    <div class="px-3">:</div>
+                                    <div>
+                                        <div>
+                                            <input type="radio" name="driving" class="" required >
+                                            <label>Yes</label>
+                                            <input type="radio" name="driving" class="" >
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column -m-1">
+                                    <label for="Linum">If Yes, Enter Your License Number</label>
+                                    <div class="px-3">:</div>
+                                    <p class=""><input type="number" name="Linum" class=" rounded-md" placeholder="License Number"></p>
+                                </div>
+                                <div class="column">
+                                    <label for="pan" class="">Do You Have Pan Card<span class="text-red-800 font-bold text-lg">*</span></label>
+                                    <div class="px-3">:</div>
+                                    <div>
+                                        <input type="radio" name="pan" class="" required>
+                                        <label>Yes</label>
+                                        <input type="radio" name="pan" class="" >
+                                        <label>No</label>
+                                    </div>
+                                    
+                                </div>
+                                <div class="column">
+                                    <label for="pan-num">If Yes, Enter Your Pan Number</label>
+                                    <div class="px-3">:</div>
+                                    <p><input type="number" name="pan-num" class=" rounded-md" placeholder="Pan Number"></p>
+                                </div>
+
+                            </div><!--Footer of form-->
+
+                        </div><!--Form body Div-->
+                
+                </form>
+                <div class="text-red-800 font-bold text-sm">* Required</div>
+                <div class="m-4 flex justify-between"><!--buttons div-->
+                    <button class="py-2 px-6 text-center inline-block shadow-xs text-xl font-medium border-2 rounded-full border-gray-200 hover:border-black hover:bg-indigo-400 cursor-pointer hover:text-gray-200" type="reset" form="form1" onclick="alert('Do You Want To Reset!')" value="Reset">
+                        Reset
+                    </button>
+                    <button class="py-2 px-6 text-center inline-block text-xl font-medium border-2 rounded-full border-gray-200 hover:border-black hover:bg-indigo-400 cursor-pointer hover:text-gray-200" type="submit" form="form1" onclick="alert('Do You Want Submit!!')" value="Submit">
+                        Submit
+                    </button>
+                </div><!--buttons div-->
+            </div><!--main div 2-->
+        </div> <!--main form div-->
+        <div id="mybutton">
+            
+            <button class="bg-white opacity-25 py-1 px-3 w-12 h-12 rounded-full hover:bg-gray-400 hover:opacity-100"><a href="#body"><img src="arrow-to-top-797976.png" alt=""></a></button>
+        </div>
+    </body>
+</html>
